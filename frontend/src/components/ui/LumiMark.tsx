@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { LuSparkles } from "react-icons/lu";
-import { LOGO_DARK_SRC, LOGO_SRC, AVATAR } from "../../constants/app";
+import { AVATAR } from "../../constants/app";
 import { cn } from "../../lib/cn";
 
 const frame =

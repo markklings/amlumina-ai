@@ -40,7 +40,7 @@ export default function TextField({
             error
               ? "border-zinc-900 dark:border-zinc-100"
               : "border-zinc-200 focus:border-zinc-900 dark:border-zinc-800 dark:focus:border-zinc-100",
-            trailing && "pr-11",
+            Boolean(trailing) && "pr-11",
             className,
           )}
           {...rest}
