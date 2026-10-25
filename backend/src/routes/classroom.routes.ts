@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { requireAuth } from "../middleware/auth";
-import { ok } from "../utils/response";
-import { respondGoogleError } from "../utils/googleErrors";
-import { fetchClassroomOverview } from "../services/classroom.service";
+import { requireAuth } from "../middleware/auth.js";
+import { ok } from "../utils/response.js";
+import { respondGoogleError } from "../utils/googleErrors.js";
+import { fetchClassroomOverview } from "../services/classroom.service.js";
 
 const router = Router();
 router.use(requireAuth);

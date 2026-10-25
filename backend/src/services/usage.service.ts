@@ -1,6 +1,6 @@
 import { and, eq, sql } from "drizzle-orm";
-import { db } from "../db/index";
-import { aiUsage } from "../db/schema";
+import { db } from "../db/index.js";
+import { aiUsage } from "../db/schema.js";
 
 export const DAILY_TOKEN_LIMIT = 100_000;
 

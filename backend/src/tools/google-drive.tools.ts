@@ -1,9 +1,9 @@
 import { google } from "googleapis";
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
-import { getGoogleAuth } from "../services/google-auth.service";
-import { accountField, runTool, type ToolDef } from "./_shared";
-import { recordLibraryItem } from "../services/library.service";
+import { getGoogleAuth } from "../services/google-auth.service.js";
+import { accountField, runTool, type ToolDef } from "./_shared.js";
+import { recordLibraryItem } from "../services/library.service.js";
 
 const APP_ID = 2;
 

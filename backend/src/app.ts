@@ -5,16 +5,16 @@ import express, {
 } from "express";
 import cors from "cors";
 import helmet from "helmet";
-import authRoutes from "./routes/auth.routes";
-import methodRoutes from "./routes/method.routes";
-import aiRoutes from "./routes/ai.routes";
-import meRoutes from "./routes/me.routes";
-import { fail } from "./utils/response";
-import { verifyMailTransport } from "./services/mail.service";
-import classroomRoutes from "./routes/classroom.routes";
-import libraryRoutes from "./routes/library.routes";
-import plannerRoutes from "./routes/planner.routes";
-import { env } from "./config/env";
+import authRoutes from "./routes/auth.routes.js";
+import methodRoutes from "./routes/method.routes.js";
+import aiRoutes from "./routes/ai.routes.js";
+import meRoutes from "./routes/me.routes.js";
+import { fail } from "./utils/response.js";
+import { verifyMailTransport } from "./services/mail.service.js";
+import classroomRoutes from "./routes/classroom.routes.js";
+import libraryRoutes from "./routes/library.routes.js";
+import plannerRoutes from "./routes/planner.routes.js";
+import { env } from "./config/env.js";
 
 const app = express();
 

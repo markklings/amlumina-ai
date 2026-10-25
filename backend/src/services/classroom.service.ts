@@ -1,5 +1,5 @@
 import { google, type classroom_v1 } from "googleapis";
-import { getGoogleAuth } from "./google-auth.service";
+import { getGoogleAuth } from "./google-auth.service.js";
 
 const APP_ID = 1;
 const MAX_COURSES = 10;

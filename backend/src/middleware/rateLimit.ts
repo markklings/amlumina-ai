@@ -1,5 +1,5 @@
 import rateLimit from "express-rate-limit";
-import { fail } from "../utils/response";
+import { fail } from "../utils/response.js";
 
 export const limiter = (limit: number, windowMs = 15 * 60_000) =>
   rateLimit({

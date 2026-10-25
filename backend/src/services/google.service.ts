@@ -1,7 +1,7 @@
 import { google } from "googleapis";
 import jwt from "jsonwebtoken";
-import { env } from "../config/env";
-import { scopesForApps } from "../constants/apps";
+import { env } from "../config/env.js";
+import { scopesForApps } from "../constants/apps.js";
 
 export type GoogleMode = "login" | "connect";
 export interface GoogleState {

@@ -1,4 +1,4 @@
-import { env } from "../config/env";
+import { env } from "../config/env.js";
 
 const APP = env.MAIL_FROM_NAME;
 const appUrl = () => env.FRONTEND_URL.replace(/\/+$/, "");

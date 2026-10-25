@@ -1,10 +1,10 @@
 import jwt from "jsonwebtoken";
 import { randomBytes } from "node:crypto";
 import type { Request } from "express";
-import { db } from "../db/index";
-import { refreshTokens } from "../db/schema";
-import { env } from "../config/env";
-import { sha256 } from "../utils/crypto";
+import { db } from "../db/index.js";
+import { refreshTokens } from "../db/schema.js";
+import { env } from "../config/env.js";
+import { sha256 } from "../utils/crypto.js";
 
 export interface AuthTokens {
   access_token: string;

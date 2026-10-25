@@ -2,7 +2,7 @@ import { Router } from "express";
 import bcrypt from "bcryptjs";
 import { z } from "zod";
 import { and, eq, gte, inArray } from "drizzle-orm";
-import { db } from "../db/index";
+import { db } from "../db/index.js";
 import {
   aiUsage,
   chats,
@@ -15,15 +15,15 @@ import {
   refreshTokens,
   users,
   authCodes,
-} from "../db/schema";
-import { decrypt, encrypt } from "../utils/crypto";
-import { requireAuth } from "../middleware/auth";
-import { ok, fail } from "../utils/response";
-import { publicUser } from "../serializers/user";
-import { mail } from "../services/mail.service";
-import { issueTokens } from "../services/token.service";
-import { DAILY_TOKEN_LIMIT } from "../services/usage.service";
-import { newOAuthClient } from "../services/google.service";
+} from "../db/schema.js";
+import { decrypt, encrypt } from "../utils/crypto.js";
+import { requireAuth } from "../middleware/auth.js";
+import { ok, fail } from "../utils/response.js";
+import { publicUser } from "../serializers/user.js";
+import { mail } from "../services/mail.service.js";
+import { issueTokens } from "../services/token.service.js";
+import { DAILY_TOKEN_LIMIT } from "../services/usage.service.js";
+import { newOAuthClient } from "../services/google.service.js";
 
 const router = Router();
 router.use(requireAuth);

@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
-import { env } from "../config/env";
-import { fail } from "../utils/response";
+import { env } from "../config/env.js";
+import { fail } from "../utils/response.js";
 
 declare global {
   namespace Express {

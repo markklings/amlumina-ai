@@ -9,10 +9,13 @@ import {
   type BaseMessage,
 } from "@langchain/core/messages";
 import type { DynamicStructuredTool } from "@langchain/core/tools";
-import { env } from "../config/env";
-import { buildSystemPrompt, type LearningMethod } from "../constants/methods";
-import { LIGHT_TASK_PROMPT, buildContextBlock } from "../constants/prompts";
-import { isErrorOutput } from "../tools/_shared";
+import { env } from "../config/env.js";
+import {
+  buildSystemPrompt,
+  type LearningMethod,
+} from "../constants/methods.js";
+import { LIGHT_TASK_PROMPT, buildContextBlock } from "../constants/prompts.js";
+import { isErrorOutput } from "../tools/_shared.js";
 
 const MAX_TOOL_STEPS = 5; // model→tools round trips per message (caps cost and loops)
 

@@ -7,7 +7,6 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "allowImportingTsExtensions": false,
   },
   "include": ["src", "api"],
 }

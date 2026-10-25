@@ -1,5 +1,5 @@
-import { db } from "../db/index";
-import { libraryItems } from "../db/schema";
+import { db } from "../db/index.js";
+import { libraryItems } from "../db/schema.js";
 
 export async function recordLibraryItem(i: {
   userId: string;

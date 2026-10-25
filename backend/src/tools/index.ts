@@ -1,14 +1,14 @@
 import { eq } from "drizzle-orm";
-import { db } from "../db/index";
-import { connectedApps } from "../db/schema";
-import type { ToolContext, ToolDef } from "./_shared";
-import { webTools } from "./web.tools";
-import { classroomTools } from "./google-classroom.tools";
-import { driveTools } from "./google-drive.tools";
-import { docsTools } from "./google-docs.tools";
-import { sheetsTools } from "./google-sheets.tools";
-import { calendarTools } from "./google-calendar.tools";
-import { tasksTools } from "./google-tasks.tools";
+import { db } from "../db/index.js";
+import { connectedApps } from "../db/schema.js";
+import type { ToolContext, ToolDef } from "./_shared.js";
+import { webTools } from "./web.tools.js";
+import { classroomTools } from "./google-classroom.tools.js";
+import { driveTools } from "./google-drive.tools.js";
+import { docsTools } from "./google-docs.tools.js";
+import { sheetsTools } from "./google-sheets.tools.js";
+import { calendarTools } from "./google-calendar.tools.js";
+import { tasksTools } from "./google-tasks.tools.js";
 
 const ALL: ToolDef[] = [
   ...webTools,

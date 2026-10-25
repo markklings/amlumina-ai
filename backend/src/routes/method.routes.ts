@@ -2,15 +2,15 @@ import { Router } from "express";
 import { z } from "zod";
 import { eq } from "drizzle-orm";
 import { db } from "../db/index";
-import { users } from "../db/schema";
+import { users } from "../db/schema.js";
 import {
   METHODS,
   METHOD_IDS,
   getMethod,
   publicMethod,
-} from "../constants/methods";
-import { requireAuth } from "../middleware/auth";
-import { ok, fail } from "../utils/response";
+} from "../constants/methods.js";
+import { requireAuth } from "../middleware/auth.js";
+import { ok, fail } from "../utils/response.js";
 
 const router = Router();
 router.use(requireAuth);

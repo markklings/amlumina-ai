@@ -3,26 +3,26 @@ import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { and, desc, eq, isNull, like, lt, or } from "drizzle-orm";
 import rateLimit from "express-rate-limit";
-import { db } from "../db/index";
-import { chats, messages, users, type Message } from "../db/schema";
-import { DEFAULT_METHOD, getMethod } from "../constants/methods";
-import { safeTimeZone } from "../constants/prompts";
-import { decrypt } from "../utils/crypto";
-import { ok, fail } from "../utils/response";
-import { requireAuth } from "../middleware/auth";
+import { db } from "../db/index.js";
+import { chats, messages, users, type Message } from "../db/schema.js";
+import { DEFAULT_METHOD, getMethod } from "../constants/methods.js";
+import { safeTimeZone } from "../constants/prompts.js";
+import { decrypt } from "../utils/crypto.js";
+import { ok, fail } from "../utils/response.js";
+import { requireAuth } from "../middleware/auth.js";
 import {
   classifyAiError,
   sanitizeHistory,
   streamTutorAgent,
   trimToBudget,
-} from "../services/ai.service";
-import { loadToolsForUser } from "../tools/index";
+} from "../services/ai.service.js";
+import { loadToolsForUser } from "../tools/index.js";
 import {
   DAILY_TOKEN_LIMIT,
   recordUsage,
   tokensUsedToday,
-} from "../services/usage.service";
-import { env } from "../config/env";
+} from "../services/usage.service.js";
+import { env } from "../config/env.js";
 
 const router = Router();
 router.use(requireAuth);

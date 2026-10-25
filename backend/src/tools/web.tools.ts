@@ -2,7 +2,7 @@ import dns from "node:dns/promises";
 import net from "node:net";
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
-import { runTool, ToolError, type ToolDef } from "./_shared";
+import { runTool, ToolError, type ToolDef } from "./_shared.js";
 
 // SSRF Guard: never let the model reach private/internal addresses
 function isPrivateIp(ip: string): boolean {

@@ -1,7 +1,7 @@
 import { eq } from "drizzle-orm";
-import { db } from "../db/index";
-import { connectedApps } from "../db/schema";
-import { appsFromGrantedScopes } from "../constants/apps";
+import { db } from "../db/index.js";
+import { connectedApps } from "../db/schema.js";
+import { appsFromGrantedScopes } from "../constants/apps.js";
 
 async function main() {
   const rows = await db.select().from(connectedApps);

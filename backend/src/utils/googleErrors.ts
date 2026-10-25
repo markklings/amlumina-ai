@@ -3,8 +3,8 @@ import {
   AppNotConnectedError,
   ToolError,
   friendlyError,
-} from "../tools/_shared";
-import { fail } from "./response";
+} from "../tools/_shared.js";
+import { fail } from "./response.js";
 
 export function respondGoogleError(res: Response, e: unknown): boolean {
   if (e instanceof AppNotConnectedError) {

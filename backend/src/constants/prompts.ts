@@ -1,4 +1,4 @@
-import { APPS } from "./apps";
+import { APPS } from "./apps.js";
 
 export const LIGHT_TASK_PROMPT = `
   Quick actions and tools:

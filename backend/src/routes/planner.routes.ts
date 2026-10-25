@@ -2,12 +2,12 @@ import { Router } from "express";
 import { google } from "googleapis";
 import { z } from "zod";
 import { eq } from "drizzle-orm";
-import { db } from "../db/index";
-import { connectedApps } from "../db/schema";
-import { requireAuth } from "../middleware/auth";
-import { ok, fail } from "../utils/response";
-import { respondGoogleError } from "../utils/googleErrors";
-import { getGoogleAuth } from "../services/google-auth.service";
+import { db } from "../db/index.js";
+import { connectedApps } from "../db/schema.js";
+import { requireAuth } from "../middleware/auth.js";
+import { ok, fail } from "../utils/response.js";
+import { respondGoogleError } from "../utils/googleErrors.js";
+import { getGoogleAuth } from "../services/google-auth.service.js";
 
 const CALENDAR_APP = 5;
 const TASKS_APP = 6;

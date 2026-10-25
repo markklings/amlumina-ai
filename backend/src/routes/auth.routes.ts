@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import { randomBytes, randomUUID } from "node:crypto";
 import { z } from "zod";
 import { and, desc, eq, isNull } from "drizzle-orm";
-import { db } from "../db/index";
+import { db } from "../db/index.js";
 import {
   users,
   connectedApps,
@@ -11,29 +11,29 @@ import {
   passwordResets,
   authCodes,
   type User,
-} from "../db/schema";
-import { APP_IDS, appsFromGrantedScopes } from "../constants/apps";
-import { decrypt, encrypt, sha256 } from "../utils/crypto";
-import { ok, fail } from "../utils/response";
-import { issueTokens } from "../services/token.service";
-import { requireAuth, parseBearer, verifyAccess } from "../middleware/auth";
+} from "../db/schema.js";
+import { APP_IDS, appsFromGrantedScopes } from "../constants/apps.js";
+import { decrypt, encrypt, sha256 } from "../utils/crypto.js";
+import { ok, fail } from "../utils/response.js";
+import { issueTokens } from "../services/token.service.js";
+import { requireAuth, parseBearer, verifyAccess } from "../middleware/auth.js";
 import {
   buildGoogleAuthUrl,
   newOAuthClient,
   verifyState,
   type GoogleMode,
-} from "../services/google.service";
-import { env } from "../config/env";
-import { publicUser } from "../serializers/user";
-import { mail } from "../services/mail.service";
-import { checkDevice } from "../services/device.service";
+} from "../services/google.service.js";
+import { env } from "../config/env.js";
+import { publicUser } from "../serializers/user.js";
+import { mail } from "../services/mail.service.js";
+import { checkDevice } from "../services/device.service.js";
 import {
   OTP_TTL_MIN,
   issueOtp,
   secondsUntilResend,
   verifyOtp,
-} from "../services/otp.service";
-import { limiter } from "../middleware/rateLimit";
+} from "../services/otp.service.js";
+import { limiter } from "../middleware/rateLimit.js";
 import { waitUntil } from "@vercel/functions";
 
 const router = Router();

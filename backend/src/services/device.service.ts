@@ -1,8 +1,8 @@
 import type { Request } from "express";
 import { and, eq } from "drizzle-orm";
-import { db } from "../db/index";
-import { knownDevices } from "../db/schema";
-import { sha256 } from "../utils/crypto";
+import { db } from "../db/index.js";
+import { knownDevices } from "../db/schema.js";
+import { sha256 } from "../utils/crypto.js";
 
 export async function checkDevice(
   userId: string,

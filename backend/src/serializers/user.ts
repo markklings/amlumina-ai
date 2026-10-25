@@ -1,4 +1,4 @@
-import type { User } from "../db/schema";
+import type { User } from "../db/schema.js";
 
 export const publicUser = (u: User) => ({
   id: u.id,

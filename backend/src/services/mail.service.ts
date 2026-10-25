@@ -1,9 +1,9 @@
 import nodemailer from "nodemailer";
 import type { Request } from "express";
-import { env } from "../config/env";
-import { describeDevice } from "./device.service";
 import { waitUntil } from "@vercel/functions";
-import * as tpl from "./mail.templates";
+import { env } from "../config/env.js";
+import { describeDevice } from "./device.service.js";
+import * as tpl from "./mail.templates.js";
 
 const transporter = nodemailer.createTransport({
   host: "smtp.gmail.com",

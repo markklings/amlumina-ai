@@ -1,8 +1,8 @@
 import { google } from "googleapis";
 import { tool } from "@langchain/core/tools";
 import { z } from "zod";
-import { getGoogleAuth } from "../services/google-auth.service";
-import { accountField, runTool, ToolError, type ToolDef } from "./_shared";
+import { getGoogleAuth } from "../services/google-auth.service.js";
+import { accountField, runTool, ToolError, type ToolDef } from "./_shared.js";
 
 const APP_ID = 6;
 const LIST = "@default";

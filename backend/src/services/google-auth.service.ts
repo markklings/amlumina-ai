@@ -1,10 +1,10 @@
 import { eq } from "drizzle-orm";
-import { db } from "../db/index";
-import { connectedApps } from "../db/schema";
-import { decrypt, encrypt } from "../utils/crypto";
-import { newOAuthClient } from "./google.service";
-import { APPS } from "../constants/apps";
-import { ToolError, AppNotConnectedError } from "../tools/_shared";
+import { db } from "../db/index.js";
+import { connectedApps } from "../db/schema.js";
+import { decrypt, encrypt } from "../utils/crypto.js";
+import { newOAuthClient } from "./google.service.js";
+import { APPS } from "../constants/apps.js";
+import { ToolError, AppNotConnectedError } from "../tools/_shared.js";
 
 export async function getGoogleAuth(
   userId: string,

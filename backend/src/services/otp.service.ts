@@ -1,8 +1,8 @@
 import { createHmac, randomInt, timingSafeEqual } from "node:crypto";
 import { and, desc, eq, isNull, lt, sql } from "drizzle-orm";
-import { db } from "../db/index";
-import { emailOtps } from "../db/schema";
-import { env } from "../config/env";
+import { db } from "../db/index.js";
+import { emailOtps } from "../db/schema.js";
+import { env } from "../config/env.js";
 
 export const OTP_TTL_MIN = 10;
 export const OTP_MAX_ATTEMPTS = 5;

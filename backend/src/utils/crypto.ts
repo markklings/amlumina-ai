@@ -4,7 +4,7 @@ import {
   createHash,
   randomBytes,
 } from "node:crypto";
-import { env } from "../config/env";
+import { env } from "../config/env.js";
 
 const key = Buffer.from(env.ENCRYPTION_KEY, "base64");
 if (key.length !== 32)

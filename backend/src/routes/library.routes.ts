@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { desc, eq } from "drizzle-orm";
-import { db } from "../db/index";
-import { libraryItems } from "../db/schema";
-import { requireAuth } from "../middleware/auth";
-import { ok } from "../utils/response";
+import { db } from "../db/index.js";
+import { libraryItems } from "../db/schema.js";
+import { requireAuth } from "../middleware/auth.js";
+import { ok } from "../utils/response.js";
 
 const router = Router();
 router.use(requireAuth);
