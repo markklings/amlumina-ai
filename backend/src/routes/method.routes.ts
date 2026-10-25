@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { z } from "zod";
 import { eq } from "drizzle-orm";
-import { db } from "../db/index";
+import { db } from "../db/index.js";
 import { users } from "../db/schema.js";
 import {
   METHODS,
