@@ -1,5 +1,5 @@
 import { DEVELOPER, SUPPORT_EMAIL } from "../../constants/app";
-import Avatar from "../ui/Avatar";
+// import Avatar from "../ui/Avatar";
 import Reveal from "./Reveal";
 
 export default function DeveloperSection() {
