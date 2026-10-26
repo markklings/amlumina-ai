@@ -35,7 +35,7 @@ export default function AuthCallbackPage() {
     started.current = true;
     window.history.replaceState(null, "", window.location.pathname); // remove the code from the address bar
     completeGoogleLogin(code)
-      .then(() => navigate("/", { replace: true })) // the guards pick /chat or /onboarding
+      .then(() => navigate(paths.chat, { replace: true })) // the guards then send new users to /onboarding
       .catch((e: unknown) =>
         setExchangeError(
           e instanceof Error ? e.message : "Google sign-in failed.",

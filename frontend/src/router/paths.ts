@@ -18,6 +18,7 @@ export const paths = {
   planner: "/planner",
   verifyEmail: "/verify-email",
   calendar: "/calendar",
+  home: "/",
 } as const;
 
 export const isOnboarded = (u: AuthUser) =>

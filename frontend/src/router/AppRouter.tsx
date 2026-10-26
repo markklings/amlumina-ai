@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthCallbackPage from "../pages/AuthCallbackPage";
 import ChatPage from "../pages/ChatPage";
 import ClassroomPage from "../pages/ClassroomPage";
@@ -18,6 +18,7 @@ import PlannerPage from "../pages/PlannerPage";
 import WorkspaceLayout from "../layouts/WorkspaceLayout";
 import VerifyEmailPage from "../pages/VerifyEmailPage";
 import CalendarPage from "../pages/CalendarPage";
+import LandingPage from "../pages/LandingPage";
 import {
   GuestOnly,
   OnboardingOnly,
@@ -61,7 +62,8 @@ export default function AppRouter() {
           </Route>
         </Route>
 
-        <Route path="/" element={<Navigate to={paths.chat} replace />} />
+        <Route path={paths.home} element={<LandingPage />} />
+        {/*<Route path="/" element={<Navigate to={paths.chat} replace />} />*/}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

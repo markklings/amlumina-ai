@@ -1,9 +1,9 @@
 import type { LegalDoc } from "../types/legal";
-import { APP_NAME } from "./app";
+import { APP_NAME, SUPPORT_EMAIL } from "./app";
 
 export const LEGAL_IS_DRAFT = false; // shows the "needs legal review" notice; set false after review
 export const LEGAL_LAST_UPDATED = "October 20, 2026";
-export const LEGAL_CONTACT_EMAIL: string | null = null; // add your support email
+export const LEGAL_CONTACT_EMAIL: string | null = SUPPORT_EMAIL; // add your support email
 
 const contact = LEGAL_CONTACT_EMAIL
   ? `Questions or requests: ${LEGAL_CONTACT_EMAIL}.`
