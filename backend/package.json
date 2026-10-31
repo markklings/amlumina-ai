@@ -58,5 +58,8 @@
     "drizzle-kit": "^0.31.11",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "overrides": {
+    "htmlparser2": "^8.0.2"
   }
 }
