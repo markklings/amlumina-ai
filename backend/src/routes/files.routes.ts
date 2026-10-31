@@ -1,3 +1,4 @@
+/// <reference path="../types/pdf-parse.d.ts" />
 import { Router } from "express";
 import multer from "multer";
 import pdfParse from "pdf-parse/lib/pdf-parse.js";
