@@ -10,5 +10,6 @@ declare module "pdf-parse/lib/pdf-parse.js" {
     version: string;
     text: string;
   }>;
+
   export default parse;
 }
