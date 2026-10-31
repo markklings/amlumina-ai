@@ -1,0 +1,4 @@
+export const API_URL = String(
+  import.meta.env.VITE_API_URL ?? "http://localhost:8000",
+).replace(/\/+$/, "");
+export const apiUrl = (path: string) => `${API_URL}${path}`;
