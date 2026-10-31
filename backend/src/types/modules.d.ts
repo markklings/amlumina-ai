@@ -1,11 +1,14 @@
 declare module "pdf-parse/lib/pdf-parse.js" {
-  const parse: (data: Buffer | ArrayBuffer | Uint8Array) => Promise<{
-    text: string;
+  function parse(
+    dataBuffer: Buffer | ArrayBuffer | Uint8Array,
+    options?: any,
+  ): Promise<{
     numpages: number;
     numrender: number;
     info: any;
     metadata: any;
     version: string;
+    text: string;
   }>;
   export default parse;
 }
