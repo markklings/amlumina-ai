@@ -35,7 +35,7 @@ export const flashcardTools: ToolDef[] = [
                 title: title.slice(0, 255),
               });
               await tx.insert(flashCards).values(
-                cards.map((c) => ({
+                cards.map((c: any) => ({
                   id: randomUUID(),
                   userId: ctx.userId,
                   deckId,

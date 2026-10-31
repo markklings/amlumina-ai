@@ -22,7 +22,7 @@ export const taskTools: ToolDef[] = [
               .limit(100);
             return {
               tasks: rows
-                .filter((t) => include_completed || !t.completed)
+                .filter((t: any) => include_completed || !t.completed)
                 .map((t) => ({
                   id: t.id,
                   title: t.title,
@@ -47,7 +47,7 @@ export const taskTools: ToolDef[] = [
           runTool(async () => {
             if (!items.length || items.length > 20)
               throw new ToolError("Provide 1 to 20 tasks.");
-            const rows = items.map((t) => {
+            const rows = items.map((t: any) => {
               if (t.due && !DATE.test(t.due))
                 throw new ToolError(
                   `Invalid due date for "${t.title}". Use YYYY-MM-DD.`,
@@ -62,7 +62,7 @@ export const taskTools: ToolDef[] = [
             });
             await db.insert(tasks).values(rows);
             return {
-              created: rows.map((r) => ({
+              created: rows.map((r: any) => ({
                 id: r.id,
                 title: r.title,
                 due: r.dueDate,

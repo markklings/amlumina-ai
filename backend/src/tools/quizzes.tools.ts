@@ -27,7 +27,7 @@ export const quizTools: ToolDef[] = [
                 "The student has too many quizzes. Ask them to delete some.",
               );
 
-            const clean = questions.map((q, i) => {
+            const clean = questions.map((q: any, i: any) => {
               if (q.options.length < 2 || q.options.length > 6)
                 throw new ToolError(`Question ${i + 1} needs 2 to 6 options.`);
               if (q.answer_index < 0 || q.answer_index >= q.options.length)
@@ -36,7 +36,7 @@ export const quizTools: ToolDef[] = [
                 );
               return {
                 prompt: q.prompt.slice(0, 500),
-                options: q.options.map((o) => o.slice(0, 300)),
+                options: q.options.map((o: any) => o.slice(0, 300)),
                 answerIndex: q.answer_index,
                 explanation: (q.explanation ?? "").slice(0, 600),
               };

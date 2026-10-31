@@ -74,7 +74,7 @@ export const calendarTools: ToolDef[] = [
             if (!events.length || events.length > 20)
               throw new ToolError("Provide 1 to 20 events.");
 
-            const rows = events.map((e) => {
+            const rows = events.map((e: any) => {
               const allDay = !!e.all_day;
               let startAt: string | null;
               let endAt: string | null;
@@ -109,7 +109,7 @@ export const calendarTools: ToolDef[] = [
             await db.insert(calendarEvents).values(rows);
             return {
               time_zone: ctx.timeZone,
-              created: rows.map((r) => ({
+              created: rows.map((r: any) => ({
                 id: r.id,
                 title: r.title,
                 start: r.allDay
